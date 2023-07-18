@@ -114,16 +114,14 @@ class Solution:
             #TODO: Write code below to return a string with the solution to the prompt.
             upper = message.upper()
             ret = ""
-            if(upper == " "): return "  "
 
-            for i in range(len(upper) - 1):
-                if(ret == " "):
-                     ret += "  "
-                     continue
-                ret += MORSE_CODE_DICT.get(upper[i])
-                ret += " "
-                    
-            ret += MORSE_CODE_DICT.get(upper[-1])
+            for c in upper:
+                if(c == " "):
+                    ret += " "
+                    continue
+                else:
+                    ret += MORSE_CODE_DICT.get(c)
+                    ret += " "
 
             return ret
 
