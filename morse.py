@@ -116,12 +116,11 @@ class Solution:
             ret = ""
 
             for i in range(len(upper) - 1):
-                if(upper[i] == " " and upper[i + 1] == " "):
-                    ret += " "
-                elif(upper[i] == " "):
-                    continue
-
+                if(ret == " "):
+                     ret += "  "
+                     continue
                 ret += MORSE_CODE_DICT.get(upper[i])
+                ret += " "
                     
             ret += MORSE_CODE_DICT.get(upper[-1])
 
