@@ -115,15 +115,15 @@ class Solution:
             upper = message.upper()
             ret = ""
 
-            for i in range(len(message) - 1):
-                if(message[i] == " " and message[i + 1] == " "):
+            for i in range(len(upper) - 1):
+                if(upper[i] == " " and upper[i + 1] == " "):
                     ret += " "
-                elif(message[i] == " "):
+                elif(upper[i] == " "):
                     continue
 
-                ret += MORSE_CODE_DICT.get(message[i])
+                ret += MORSE_CODE_DICT.get(upper[i])
                     
-            ret += MORSE_CODE_DICT.get(message[-1])
+            ret += MORSE_CODE_DICT.get(upper[-1])
 
             return ret
 
