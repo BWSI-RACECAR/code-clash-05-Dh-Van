@@ -114,6 +114,7 @@ class Solution:
             #TODO: Write code below to return a string with the solution to the prompt.
             upper = message.upper()
             ret = ""
+            if(upper == " "): return "  "
 
             for i in range(len(upper) - 1):
                 if(ret == " "):
